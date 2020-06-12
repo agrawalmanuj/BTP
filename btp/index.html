@@ -7,38 +7,142 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style>
+
+</style>
 	
 </head>
 <body>
+<div class="container">
+<!--<div class="row">
+<div class="col-md-4 ml-2" style="border: 2px red solid">
+	<p><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
+	<p><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
+	<p><b>Contact:</b> 1234567890</p>
+</div>
+<div class="col-md-4 ml-2" style="border: 2px red solid">
+	<p><b>Blood Bank Name:</b> Rural ospital Blood Bank</p>
+	<p><b>Address:</b> Blood Bank Medical Oian Red Cross Society, Anantpur</p>
+	<p><b>Contact:</b> 1234567890</p>
+</div>
+<div class="col-md-4 ml-2" style="border: 2px red solid">
+	<p><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
+	<p><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
+	<p><b>Contact:</b> 1234567890</p>
+</div>
 
-<select id="blood-group" onchange="myFunction()">
-	<option value="A+">A+</option>
-	<option value="B+">B+</option>
-	<option value="AB+">AB+</option>
-	<option value="A-">A-</option>
-	<option value="B-">B-</option>
-	<option value="AB-">AB-</option>
-	<option value="O+">O+</option>
-	<option value="O-">O-</option>
-</select>
+</div>!-->
+
+<!--<div class="row mt-5">
+  <div class="col-sm-4 mt-2">
+    <div class="card">
+      <div class="card-body">
+        
+        <p class="card-text"><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
+		<p class="card-text"><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
+		<p class="card-text"><b>Contact:</b> 1234567890</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p class="card-text"><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
+		<p class="card-text"><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
+		<p class="card-text"><b>Contact:</b> 1234567890</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p class="card-text"><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
+		<p class="card-text"><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
+		<p class="card-text"><b>Contact:</b> 1234567890</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mt-2">
+    <div class="card">
+      <div class="card-body">
+        
+        <p class="card-text"><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
+		<p class="card-text"><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
+		<p class="card-text"><b>Contact:</b> 1234567890</p>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+</div>!-->
 
 
-<input type="text" class="" placeholder="City" id="city-input">
-<button type="button" class="btn btn-primary" onclick="getData()"> submit </button>
 
-<table class="table">
-  <thead>
-    <tr>
-      
-      <th scope="col">name</th>
-      <th scope="col">address</th>
-      <th scope="col">contact</th>
-    </tr>
-  </thead>
-  <tbody id="t_body">
-  </tbody>
-</table>
 
+<div class="row mt-5 mb-3">
+	<div class="col-md-4">
+		<label>Blood Group: </label>
+			<select id="blood-group" class="btn btn-danger btn-sm" data-style="btn-new" onchange="myFunction()">
+				<option value="A+">A+</option>
+				<option value="B+">B+</option>
+				<option value="AB+">AB+</option>
+				<option value="A-">A-</option>
+				<option value="B-">B-</option>
+				<option value="AB-">AB-</option>
+				<option value="O+">O+</option>
+				<option value="O-">O-</option>
+			</select>
+	</div>
+
+	<div class="col-md-4">
+		<input type="text" class="" placeholder="City" id="city-input">
+	</div>
+
+	<div class="col-md-4">
+		<button type="button" class="btn btn-primary" onclick="getData()"> submit </button>
+	</div>
+</div>
+	
+
+	<div class="row mt-5 mb-5" id="c_body">
+  <!--<div class="col-sm-4 mt-2">
+    <div class="card">
+      <div class="card-body">
+        
+        <p class="card-text"><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
+		<p class="card-text"><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
+		<p class="card-text"><b>Contact:</b> 1234567890</p>
+        
+      </div>
+    </div>
+  </div>!-->
+</div>
+
+
+	<!--<table class="table">
+	  <thead>
+	    <tr>
+	      
+	      <th scope="col">Blood Bank Name</th>
+	      <th scope="col">Address</th>
+	      <th scope="col">Contact</th>
+	    </tr>
+	  </thead>
+	  <tbody id="t_body">
+	  </tbody>
+	</table>!-->
+
+</div>
 
 <script src="app.js"></script>
 
