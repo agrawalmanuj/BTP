@@ -24,14 +24,27 @@ var k=0;
 
 for(i=0;i<10;i++){
 	
-	var list = `<tr>
+	/*var list = `<tr>
       <td>${data[i][s1]}</td>
       <td>${data[i].Address}</td>
       <td>${data[i].Mobile}</td>
-    </tr>`;
-    var p = document.getElementById("t_body");
-    p.innerHTML+=list;
-    
+    </tr>`;*/
+
+    var list2 = `<div class="col-md-4 mt-4 d-flex align-items-stretch">
+    <div class="card">
+      <div class="card-body">
+        
+        <p class="card-text"><b>Blood Bank Name:</b> ${data[i][s1]}</p>
+		<p class="card-text"><b>Address:</b> ${data[i].Address}</p>
+		<p class="card-text"><b>Contact:</b> ${data[i].Mobile}</p>
+        
+      </div>
+    </div>
+  </div>`
+    //var p = document.getElementById("t_body");
+    var q=document.getElementById("c_body");
+    //p.innerHTML+=list;
+    q.innerHTML+=list2;
 
 }
 
@@ -52,8 +65,10 @@ function getData(){
 	console.log(inp);
 	console.log(x);
 
-	var p = document.getElementById("t_body");
-    p.innerHTML='';
+	//var p = document.getElementById("t_body");
+	var q=document.getElementById("c_body");
+    //p.innerHTML='';
+    q.innerHTML='';
 
 	for(i=0;i<data.length;i++){
 		var city=data[i].City;
@@ -64,13 +79,26 @@ function getData(){
 			for(var j=0;j<4;j++){
 				if(data[i].BG[j]==x){
 					console.log(data[i]);
-					var list = `<tr>
+					/*var list = `<tr>
 						      <td>${data[i][s1]}</td>
 						      <td>${data[i].Address}</td>
 						      <td>${data[i].Mobile}</td>
-						    </tr>`;
+						    </tr>`;*/
 
-						p.innerHTML+=list;
+					var list2 = `<div class="col-md-4 mt-4 d-flex align-items-stretch">
+								    <div class="card">
+								      <div class="card-body">
+								        
+								        <p class="card-text"><b>Blood Bank Name:</b> ${data[i][s1]}</p>
+										<p class="card-text"><b>Address:</b> ${data[i].Address}</p>
+										<p class="card-text"><b>Contact:</b> ${data[i].Mobile}</p>
+								        
+								      </div>
+								    </div>
+								  </div>`
+
+						//p.innerHTML+=list;
+						q.innerHTML+=list2;
 
 
 				}
