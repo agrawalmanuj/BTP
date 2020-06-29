@@ -7,85 +7,120 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+        <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=xjlW9UwAkqIqDq1yVuVyTKHuIhFk5JVM"></script>
+        <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=xjlW9UwAkqIqDq1yVuVyTKHuIhFk5JVM"></script>
+
+
+   
 
 <style>
 
-</style>
 	
+.card:hover{
+	background-color: #f5b042;
+	box-shadow: 10px 10px 5px -9px rgba(245,176,66,1);
+	color:white;
+}
+/*.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+}*/
+
+</style>
+
 </head>
 <body>
+
+<!--<div id="mapid">
+</div>!-->
+
+
+<script>
+	
+</script>
+<script>
+	
+	/*function initMap() {
+ 
+  var uluru = {lat: -25.344, lng: 131.036};
+ 
+  var map = new google.maps.Map(
+      document.getElementById('inst'), {zoom: 4, center: uluru});
+  
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}*/
+
+</script>
+<!--<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsNXEERatQOyd-xPp_ry4RLVofXbuUwgk&callback=initMap">
+    </script>!-->
+
+    
+
+<!--<button class="btn badge-danger" onclick="initMap(-25.344,131.036)">click me</button>
+<button class="btn badge-danger" onclick="initMap(-25.344,131.036)">click me</button>!-->
+
+
+
+
+
+
+ 
+  
+  <!--<a   data-toggle="modal" data-target="#myModal" onclick="initMap(-25.344,131.036)">
+    Open modal
+  </a>!-->
+
+  
+  <!--<div class="modal" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        
+       
+      		<div class="modal-header" id="weathermap">
+        	<div id="inst" style="height: 600px;width:100%;">
+        	</div>
+          
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        
+        <div class="modal-body">
+            <div class="map_container">
+                <div id="inst" style="height: 500px;width:100%;"></div>
+            </div>
+        </div>
+        
+        
+        
+        
+      </div>
+    </div>
+  </div>!-->
+  
+
+
+
+
+
+
+
+
 <div class="container">
-<!--<div class="row">
-<div class="col-md-4 ml-2" style="border: 2px red solid">
-	<p><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
-	<p><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
-	<p><b>Contact:</b> 1234567890</p>
-</div>
-<div class="col-md-4 ml-2" style="border: 2px red solid">
-	<p><b>Blood Bank Name:</b> Rural ospital Blood Bank</p>
-	<p><b>Address:</b> Blood Bank Medical Oian Red Cross Society, Anantpur</p>
-	<p><b>Contact:</b> 1234567890</p>
-</div>
-<div class="col-md-4 ml-2" style="border: 2px red solid">
-	<p><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
-	<p><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
-	<p><b>Contact:</b> 1234567890</p>
-</div>
 
-</div>!-->
-
-<!--<div class="row mt-5">
-  <div class="col-sm-4 mt-2">
-    <div class="card">
-      <div class="card-body">
-        
-        <p class="card-text"><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
-		<p class="card-text"><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
-		<p class="card-text"><b>Contact:</b> 1234567890</p>
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        
-        <p class="card-text"><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
-		<p class="card-text"><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
-		<p class="card-text"><b>Contact:</b> 1234567890</p>
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        
-        <p class="card-text"><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
-		<p class="card-text"><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
-		<p class="card-text"><b>Contact:</b> 1234567890</p>
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-4 mt-2">
-    <div class="card">
-      <div class="card-body">
-        
-        <p class="card-text"><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
-		<p class="card-text"><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
-		<p class="card-text"><b>Contact:</b> 1234567890</p>
-        
-      </div>
-    </div>
-  </div>
-  
-  
-</div>!-->
-
+<h1 class="text-center mt-3 pb-3" style="color: #f5b042;">Blood Bank Locator</h1>
 
 
 
@@ -115,36 +150,31 @@
 	
 
 	<div class="row mt-5 mb-5" id="c_body">
-  <!--<div class="col-sm-4 mt-2">
-    <div class="card">
-      <div class="card-body">
-        
-        <p class="card-text"><b>Blood Bank Name:</b> Rural Development Trust Hospital Blood Bank</p>
-		<p class="card-text"><b>Address:</b> Blood Bank Medical Officer,Blood Bank, Indian Red Cross Society, Anantpur</p>
-		<p class="card-text"><b>Contact:</b> 1234567890</p>
-        
-      </div>
-    </div>
-  </div>!-->
+  
 </div>
 
 
-	<!--<table class="table">
-	  <thead>
-	    <tr>
-	      
-	      <th scope="col">Blood Bank Name</th>
-	      <th scope="col">Address</th>
-	      <th scope="col">Contact</th>
-	    </tr>
-	  </thead>
-	  <tbody id="t_body">
-	  </tbody>
-	</table>!-->
 
 </div>
+
+<div id="tot">
+<div id="mapid" style="height:530px;width:100%;">
+</div>
+</div>
+
 
 <script src="app.js"></script>
+<!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+<script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=xjlW9UwAkqIqDq1yVuVyTKHuIhFk5JVM"></script>
+<script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=xjlW9UwAkqIqDq1yVuVyTKHuIhFk5JVM"></script>!-->
+<!--<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsNXEERatQOyd-xPp_ry4RLVofXbuUwgk">
+  </script>!-->
+  
+
+
 
 </body>
 </html>
